@@ -1,0 +1,12 @@
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\obj\Debug\Ef_ModelFirst.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\Ef_ModelFirst.exe.config
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\Ef_ModelFirst.exe
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\Ef_ModelFirst.pdb
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\EntityFramework.dll
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\EntityFramework.xml
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\obj\Debug\Ef_ModelFirst.csproj.CopyComplete
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\obj\Debug\Ef_ModelFirst.exe
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\obj\Debug\Ef_ModelFirst.pdb
+C:\Users\1\source\repos\Ef_ModelFirst\Ef_ModelFirst\obj\Debug\Ef_ModelFirst.csproj.AssemblyReference.cache

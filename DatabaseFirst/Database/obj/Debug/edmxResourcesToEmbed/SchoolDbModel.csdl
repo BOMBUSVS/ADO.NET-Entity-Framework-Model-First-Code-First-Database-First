@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudyModelFirstContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="Class_Id" />
+    </Key>
+    <Property Name="Class_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subjects" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Teachers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_SchoolStudent" FromRole="SchoolS" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_Id" />
+    </Key>
+    <Property Name="Student_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="SchoolClass_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="School" Relationship="Self.FK_SchoolStudent" FromRole="Students" ToRole="SchoolS" />
+  </EntityType>
+  <Association Name="FK_SchoolStudent">
+    <End Role="SchoolS" Type="Self.School" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchoolS">
+        <PropertyRef Name="Class_Id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="SchoolClass_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StudyModelFirstEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SchoolS" EntityType="Self.School" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <AssociationSet Name="FK_SchoolStudent" Association="Self.FK_SchoolStudent">
+      <End Role="SchoolS" EntitySet="SchoolS" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
